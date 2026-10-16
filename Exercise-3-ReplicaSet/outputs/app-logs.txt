@@ -1,0 +1,25 @@
+﻿[pod/flashsale-rs-4x7xv/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[pod/flashsale-rs-4x7xv/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[pod/flashsale-rs-4x7xv/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Using worker: gthread
+[pod/flashsale-rs-4x7xv/flashsale-container] [2026-10-16 17:55:16 +0000] [8] [INFO] Booting worker with pid: 8
+[pod/flashsale-rs-4x7xv/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Control socket listening at /root/.gunicorn/gunicorn.ctl
+[pod/flashsale-rs-c8gz5/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[pod/flashsale-rs-c8gz5/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[pod/flashsale-rs-c8gz5/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Using worker: gthread
+[pod/flashsale-rs-c8gz5/flashsale-container] [2026-10-16 17:53:11 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/flashsale-rs-c8gz5/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Control socket listening at /root/.gunicorn/gunicorn.ctl
+[pod/flashsale-rs-fk5cn/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[pod/flashsale-rs-fk5cn/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[pod/flashsale-rs-fk5cn/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Using worker: gthread
+[pod/flashsale-rs-fk5cn/flashsale-container] [2026-10-16 17:53:11 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/flashsale-rs-fk5cn/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Control socket listening at /root/.gunicorn/gunicorn.ctl
+[pod/flashsale-rs-rtnks/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[pod/flashsale-rs-rtnks/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[pod/flashsale-rs-rtnks/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Using worker: gthread
+[pod/flashsale-rs-rtnks/flashsale-container] [2026-10-16 17:55:16 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/flashsale-rs-rtnks/flashsale-container] [2026-10-16 17:55:16 +0000] [1] [INFO] Control socket listening at /root/.gunicorn/gunicorn.ctl
+[pod/flashsale-rs-t9952/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[pod/flashsale-rs-t9952/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[pod/flashsale-rs-t9952/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Using worker: gthread
+[pod/flashsale-rs-t9952/flashsale-container] [2026-10-16 17:53:11 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/flashsale-rs-t9952/flashsale-container] [2026-10-16 17:53:11 +0000] [1] [INFO] Control socket listening at /root/.gunicorn/gunicorn.ctl
