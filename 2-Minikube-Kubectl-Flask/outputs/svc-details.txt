@@ -1,0 +1,18 @@
+﻿Name:                     flask-app
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=flask-app
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.110.108.168
+IPs:                      10.110.108.168
+Port:                     <unset>  15000/TCP
+TargetPort:               15000/TCP
+NodePort:                 <unset>  31490/TCP
+Endpoints:                10.244.0.4:15000
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
