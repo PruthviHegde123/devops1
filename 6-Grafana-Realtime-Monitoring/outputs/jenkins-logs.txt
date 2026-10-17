@@ -1,0 +1,4 @@
+Jenkins pipeline:
+- Jenkinsfile created.
+- Pipeline stages: Checkout, Validate Files, Build Docker Image.
+- Jenkins pipeline execution has not yet been verified.

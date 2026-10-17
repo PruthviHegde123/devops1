@@ -1,0 +1,4 @@
+Prometheus monitoring:
+- Prometheus configured to scrape delivery_service metrics.
+- Query {job="delivery_service"} returned 21 result series during verification.
+- Delivery metrics were available when the Python application was running.

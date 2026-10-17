@@ -1,0 +1,5 @@
+Grafana monitoring:
+- Grafana dashboard configured.
+- Prometheus configured as the data source.
+- Dashboard panels created for delivery metrics.
+- Some panel data visualization could not be fully verified.

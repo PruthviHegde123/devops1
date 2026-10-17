@@ -1,0 +1,4 @@
+Docker containers used for Exercise 6:
+- prometheus
+- grafana
+- delivery-monitoring (application image)
