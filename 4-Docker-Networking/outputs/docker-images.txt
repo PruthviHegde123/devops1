@@ -1,0 +1,6 @@
+﻿IMAGE                                                                                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+flask-network-app:1.0                                                                                 e39fd125de33        211MB         51.3MB   U    
+gcr.io/k8s-minikube/kicbase:v0.0.51                                                                   146cd636030e       1.89GB          532MB        
+gcr.io/k8s-minikube/kicbase@sha256:4a1c825b61479e6c898851ea66f13c620aaeab6002746e95067fc2c4b38a0b24   4a1c825b6147       1.89GB          532MB   U    
+mysql:8.0                                                                                             7dcddc01f13b        1.1GB          249MB   U    
+redis:latest                                                                                          2c2dff791878        213MB         57.6MB   U    

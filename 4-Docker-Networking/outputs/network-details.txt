@@ -1,0 +1,66 @@
+﻿[
+    {
+        "Name": "devops-network",
+        "Id": "acef6b1ff1b12fcef9783f59ae845fd0a83e2e121549e169ec17de4e78aac198",
+        "Created": "2026-10-17T06:36:02.265342767Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {},
+        "Containers": {
+            "2822d92dd3c60de9190bf1af24e1898e64c90b49b64d9cd32131ce951f28bcec": {
+                "Name": "redis-server",
+                "EndpointID": "6bc86cdf1a2d07a42e602c5f420cb009a5ddd5a35fc49dbb915918c20b8d1e84",
+                "MacAddress": "f2:87:7e:5d:fb:da",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "754b93e5af10c46b4f9e05a13f626902d54aee20a2bd4f0eb8b1872969f015b8": {
+                "Name": "flask-network-app",
+                "EndpointID": "a57665fc2d71e499e86d330bc63909b6242e995a76d51bafe1ebab7f0eda1c8a",
+                "MacAddress": "0e:dd:4c:a1:89:bf",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "cfabc0ce06a8a08910980fc2115cb983e2909e982b1119dae2cccb3a87ade4d5": {
+                "Name": "mysql-server",
+                "EndpointID": "7e9193455570e5c64a3da122b00a9ed4a5953a8531ad321c7b3ee72d05204a60",
+                "MacAddress": "22:cb:ad:f2:23:ad",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.18.0.0/16": {
+                        "IPsInUse": 6,
+                        "DynamicIPsAvailable": 65530
+                    }
+                }
+            }
+        }
+    }
+]

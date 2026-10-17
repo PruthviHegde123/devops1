@@ -1,0 +1,6 @@
+﻿NETWORK ID     NAME             DRIVER    SCOPE
+c7a1e7b93b92   bridge           bridge    local
+acef6b1ff1b1   devops-network   bridge    local
+0d3312d82a15   host             host      local
+4e2d48cdf05d   minikube         bridge    local
+d346c336f70e   none             null      local
