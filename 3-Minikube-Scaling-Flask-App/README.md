@@ -1,88 +1,75 @@
-\# Exercise 3: Scaling Flask App on Minikube Using ReplicaSets
+﻿# Scaling Flask App on Minikube Using ReplicaSets
 
+## Objective
 
+Understand Kubernetes ReplicaSets, scale a Flask application, and observe Pod distribution and automatic recovery.
 
-\## Aim
+## Scenario
 
-To deploy and scale a Flask application on Kubernetes using Minikube and ReplicaSets.
+During an e-commerce flash sale, application traffic can increase significantly. Running multiple replicas of the Flask application helps maintain availability and handle incoming requests.
 
+This exercise demonstrates how Kubernetes ReplicaSets manage application Pods and maintain the desired number of replicas.
 
+## Tasks
 
-\## Tools Used
+### Task 1: Create the Flask Application
 
-\- Docker Desktop
+Develop a Flask application that simulates an e-commerce flash sale.
 
-\- Docker
+The application provides the following endpoints:
 
-\- Minikube
+- `/` — Displays a welcome message and the Pod hostname.
+- `/buy` — Simulates a purchase and displays the product, user, and Pod handling the request.
+- `/health` — Checks application health.
 
-\- Kubernetes
+### Task 2: Create the Docker Image
 
-\- kubectl
+Create a Dockerfile for the Flask application and build the Docker image.
 
-\- Python
+### Task 3: Start Minikube
 
-\- Flask
+Start Minikube with a single node and verify that the Kubernetes node is running.
 
+### Task 4: Create the ReplicaSet and Service
 
+Create the `flashsale-replicaset.yaml` configuration file to define a ReplicaSet with three replicas and a Kubernetes Service.
 
-\## Overview
+### Task 5: Deploy the Application
 
-This exercise demonstrates how Kubernetes ReplicaSets maintain the desired number of application Pods. A Flask application simulating an e-commerce flash sale is deployed and scaled to demonstrate workload management and automatic Pod replacement.
+Apply the Kubernetes configuration and verify that the ReplicaSet and its Pods are created.
 
+### Task 6: Scale the ReplicaSet
 
+Increase the number of replicas from three to five and verify that Kubernetes creates the additional Pods.
 
-\## Application Endpoints
+### Task 7: Test Automatic Pod Replacement
 
-\- `/` – Displays a welcome message and Pod hostname.
+Delete one of the running Pods and verify that the ReplicaSet automatically creates a replacement to maintain five replicas.
 
-\- `/buy` – Simulates a purchase.
+### Task 8: Observe Pod Distribution
 
-\- `/health` – Checks application health.
+Use Kubernetes commands to inspect the running Pods and identify the node on which they are scheduled.
 
+## Files Used
 
+- `app.py` — Flask application.
+- `Dockerfile` — Docker image configuration.
+- `flashsale-replicaset.yaml` — ReplicaSet and Service configuration.
+- `outputs/` — Stores command outputs.
+- `screenshots/` — Stores practical screenshots.
 
-\## Files
+## Key Observations
 
-\- `app.py` – Flask application.
+- The initial ReplicaSet maintains three Pods.
+- Scaling to five replicas creates two additional Pods.
+- Deleting a Pod causes Kubernetes to create a replacement.
+- All five Pods can run on the same Minikube node.
+- The application endpoints help demonstrate which Pod handles a request.
 
-\- `Dockerfile` – Builds the Docker image.
+## Result
 
-\- `flashsale-replicaset.yaml` – Kubernetes ReplicaSet and Service configuration.
+The Flask application was deployed on Minikube using Kubernetes ReplicaSets. Scaling the application and deleting a Pod demonstrated replica management and automatic Pod replacement.
 
-\- `outputs/` – Stores command outputs.
+## Conclusion
 
-\- `screenshots/` – Stores practical screenshots.
-
-
-
-\## Procedure
-
-1\. Start Minikube and verify the cluster status.
-
-2\. Build the Docker image for the Flask application.
-
-3\. Deploy the application using the Kubernetes configuration file.
-
-4\. Verify the running Pods.
-
-5\. Scale the ReplicaSet from three to five replicas.
-
-6\. Delete a Pod and verify its automatic replacement.
-
-7\. Access the application through the Kubernetes Service and test its endpoints.
-
-
-
-\## Result
-
-The Flask application was deployed on Minikube. ReplicaSet scaling and automatic Pod replacement demonstrated Kubernetes workload management.
-
-
-
-\## Conclusion
-
-Kubernetes ReplicaSets help maintain the desired number of Pods, scale applications, and improve availability during periods of high traffic.
-
-
-
+Kubernetes ReplicaSets maintain the desired number of application Pods and help improve application availability through scaling and automatic recovery.
