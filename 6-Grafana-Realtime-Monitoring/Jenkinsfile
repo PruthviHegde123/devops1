@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Source code is ready for monitoring.'
+            }
+        }
+
+        stage('Validate Files') {
+            steps {
+                bat 'python --version'
+                bat 'python -m py_compile delivery_metrics.py'
+                bat 'dir'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t delivery-monitoring .'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Monitoring application pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed. Check the console output.'
+        }
+    }
+}

@@ -1,21 +1,36 @@
-# 6-Grafana-Realtime-Monitoring
+# Exercise 6: Grafana Real-Time Monitoring
 
 ## Aim
-To understand and perform the practical exercise related to 6-Grafana-Realtime-Monitoring.
+To monitor a delivery service using Prometheus metrics and Grafana dashboards.
 
 ## Tools Used
-- Docker Desktop
-- Minikube
-- Kubernetes
-- kubectl
-- Jenkins or Grafana, where applicable
+- Python
+- Flask
+- Prometheus
+- Grafana
+- Docker
 
-## Procedure
-1. Set up the required tools.
-2. Configure the environment for the exercise.
-3. Execute the relevant commands and configurations.
-4. Verify the results.
-5. Record the observations.
+## Overview
+The application exposes delivery-service metrics that Prometheus can collect. Grafana uses Prometheus as its data source to visualize these metrics and monitor service activity.
 
-## Result
-The exercise is documented. Add the actual commands, screenshots, and results after completing the practical.
+## Metrics
+The monitoring setup includes delivery-related metrics such as:
+- Total deliveries
+- Pending deliveries
+- Deliveries on the way
+- Average delivery time
+
+## Configuration Files
+- delivery_metrics.py: Application and metrics implementation.
+- requirements.txt: Python dependencies.
+- Dockerfile: Instructions for building the application image.
+- prometheus.yml: Prometheus scrape configuration.
+- alert_rules.yml: Alerting rule definitions.
+
+## Verification
+Prometheus was verified to return 21 result series for the query `{job="delivery_service"}`.
+
+Grafana panels were configured, but one panel did not consistently display data. Complete visualization of every panel could not be verified.
+
+## Conclusion
+The exercise demonstrates exposing application metrics, collecting them with Prometheus, and visualizing monitoring data in Grafana.
