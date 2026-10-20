@@ -4,49 +4,59 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Preparing Python application...'
-                sh 'python3 --version'
-                sh 'python3 -m pip --version'
-                sh 'python3 -m venv .venv'
-                sh '.venv/bin/python -m pip install -r requirements.txt'
+                dir('9-Jenkins-Multi-Stage-Pipeline') {
+                    echo 'Preparing Python application...'
+                    sh 'python3 --version'
+                    sh 'python3 -m pip --version'
+                    sh 'python3 -m venv .venv'
+                    sh '.venv/bin/python -m pip install -r requirements.txt'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running unit tests...'
-                sh '.venv/bin/python test_app.py'
+                dir('9-Jenkins-Multi-Stage-Pipeline') {
+                    echo 'Running unit tests...'
+                    sh '.venv/bin/python test_app.py'
+                }
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                sh '''
-                    mkdir -p "${WORKSPACE}/python-app-deploy"
-                    cp app.py requirements.txt "${WORKSPACE}/python-app-deploy/"
-                '''
+                dir('9-Jenkins-Multi-Stage-Pipeline') {
+                    echo 'Deploying application...'
+                    sh '''
+                        mkdir -p "${WORKSPACE}/python-app-deploy"
+                        cp app.py requirements.txt "${WORKSPACE}/python-app-deploy/"
+                    '''
+                }
             }
         }
 
         stage('Run Application') {
             steps {
-                echo 'Starting application...'
-                sh '''
-                    cd "${WORKSPACE}/python-app-deploy"
-                    nohup "${WORKSPACE}/.venv/bin/python" app.py > app.log 2>&1 &
-                    echo $! > app.pid
-                    sleep 3
-                '''
+                dir('9-Jenkins-Multi-Stage-Pipeline') {
+                    echo 'Starting application...'
+                    sh '''
+                        nohup "${WORKSPACE}/9-Jenkins-Multi-Stage-Pipeline/.venv/bin/python" app.py \
+                            > "${WORKSPACE}/python-app-deploy/app.log" 2>&1 &
+                        echo $! > "${WORKSPACE}/python-app-deploy/app.pid"
+                        sleep 3
+                    '''
+                }
             }
         }
 
         stage('Test Application') {
             steps {
-                echo 'Testing application...'
-                sh '''
-                    "${WORKSPACE}/.venv/bin/python" -c "from urllib.request import urlopen; r=urlopen('http://127.0.0.1:5000/'); print(r.read().decode()); assert r.status == 200"
-                '''
+                dir('9-Jenkins-Multi-Stage-Pipeline') {
+                    echo 'Testing application...'
+                    sh '''
+                        .venv/bin/python -c "from urllib.request import urlopen; r=urlopen('http://127.0.0.1:5000/'); print(r.read().decode()); assert r.status == 200"
+                    '''
+                }
             }
         }
     }
