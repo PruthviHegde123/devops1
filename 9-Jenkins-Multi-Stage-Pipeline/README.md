@@ -1,21 +1,50 @@
-# 9-Jenkins-Multi-Stage-Pipeline
+# \# Exercise 9: Jenkins Multi-Stage Pipeline
 
-## Aim
-To understand and perform the practical exercise related to 9-Jenkins-Multi-Stage-Pipeline.
+# 
 
-## Tools Used
-- Docker Desktop
-- Minikube
-- Kubernetes
-- kubectl
-- Jenkins or Grafana, where applicable
+# \## Aim
 
-## Procedure
-1. Set up the required tools.
-2. Configure the environment for the exercise.
-3. Execute the relevant commands and configurations.
-4. Verify the results.
-5. Record the observations.
+# To create and execute a Jenkins pipeline with multiple stages to install dependencies, test a Python Flask application, deploy the application, and verify its response.
 
-## Result
-The exercise is documented. Add the actual commands, screenshots, and results after completing the practical.
+# 
+
+# \## Tools and Technologies
+
+# \- Jenkins
+
+# \- Docker Desktop
+
+# \- Python
+
+# \- Flask
+
+# \- Git and GitHub
+
+# \- Jenkins Pipeline (Jenkinsfile)
+
+# 
+
+# \## Project Structure
+
+# 
+
+# ```text
+
+# 9-Jenkins-Multi-Stage-Pipeline/
+
+# ├── app.py
+
+# ├── test\_app.py
+
+# ├── requirements.txt
+
+# ├── Jenkinsfile
+
+# ├── jenkins-agent/
+
+# │   └── Dockerfile
+
+# ├── screenshots/
+
+# └── outputs/
+
